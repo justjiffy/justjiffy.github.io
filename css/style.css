@@ -1,21 +1,37 @@
-#header {
-	position: fixed;
-	top:0;
-	left:0;
+html {font-size: 100%;
 }
 
-#nav {
+body {
+    font-family: Lucida Console, lucida, courier;
+	font-size: 1em;
+	color: #666666;	
+	background-color: white
+}
+
+.header {
+	position: fixed;
+}
+
+.nav {
 	position: fixed;
 	bottom: 0;
 	right: 0;
 }
 
+.lightswitch {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
 p {
-	font-family: Lucida Console, lucida, courier;
-	font-size: 14px;
-	color: #666666;
-	padding-top: 90px;
-	padding-left: 40px;
+	
 }
 
 hr {
@@ -61,3 +77,28 @@ a:visited {
 a:active {
 	text-decoration: none;
 }
+
+.welcome {
+	padding-top: 15em;
+	padding-bottom: 20em;
+	padding-right: 50%;
+	padding-left: 50%;
+}
+
+.who {
+	padding-top: 7em;
+	padding-bottom: 20em;
+}
+
+.what {
+	padding-top: 7em;
+}
+
+.where {
+	padding-top: 7em;
+}
+
+@media (min-width: 625px) {
+
+
+	}
