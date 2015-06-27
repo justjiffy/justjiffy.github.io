@@ -19,12 +19,14 @@ body {
 }
 
 .header {
+	width: 100%;
 	position: fixed;
 }
 
 .nav {
+	width: 35%;
 	position: fixed;
-	bottom: 0;
+	bottom: 1em;
 	right: 0;
 }
 
@@ -126,6 +128,21 @@ a:active {
 	padding-top: 7em;
 }
 
-@media (max-width: 725px) {
+@media (max-width: 825px) {
+	img.what {
+	height: 25%;
+	width: 25%;
+	padding: .5em;
+	float: left
+    }
+}
 
+@media (max-width: 525px) {
+
+	img.what {
+	height: 80%;
+	width: 80%;
+	padding: .5em;
+	float: left;
 	}
+ }
