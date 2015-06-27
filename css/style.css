@@ -1,4 +1,5 @@
 html {font-size: 100%;
+
 }
 
 body {
@@ -6,6 +7,15 @@ body {
 	font-size: 1em;
 	color: #666666;	
 	background-color: white
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
 }
 
 .header {
@@ -30,31 +40,35 @@ body {
 	left: 0;
 }
 
-p {
-	
-}
-
-hr {
-	color: #ffffff;
-	height: 75px;
-	border: none;
-	box-shadow: none;
-}
-
 img {
+	width: 80%;
+	height: 80%;
 	padding: 5px;
 }
 
 img.link {
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	width: 80%;
+	height: 80%;
 }
 
 img.piclink {
+	height: 50%;
+	width: 50%;
 	padding: 0px;
 	float: right;
+}
+
+img.navlink {
+	height: 80%;
+	width: 80%;
+	float: right;
+}
+
+img.what {
+	height: 15%;
+	width: 15%;
+	padding: .5em;
+	float: left;
 }
 
 a:link {
@@ -98,7 +112,6 @@ a:active {
 	padding-top: 7em;
 }
 
-@media (min-width: 625px) {
-
+@media (max-width: 725px) {
 
 	}
