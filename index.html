@@ -10,10 +10,16 @@
 
 		<div class="container">
 			<div class="header">
-				<div class="lightswitch"><img class="piclink" src="images/pully_long.png" height="200px" alt="Click me to turn off the lights!" /></div>
+				<div class="lightswitch show"><img class="piclink" src="images/pully_long.png" height="200px" alt="Click me to turn off the lights!" /></div>
 
-				<h1><a class="logo" href="#home"><img class="link" src="images/justjiffy.png" alt="justjiffy.com" /></a></h1>
+					<div class="lightswitchoff hide"><img class="piclink" src="images/pully_short.png" height="200px" alt="Click me to turn on the lights!" /></div>
+
+				<div class="justjiffy show"><h1><a class="logo" href="#home"><img class="link" src="images/justjiffy.png" alt="justjiffy.com" /></a></h1></div>
+
+					<div class="justjiffyoff hide"><h1><a class="logo" href="#home"><img class="link" src="images/justjiffy_off.png" alt="justjiffy.com" /></a></h1></div>
 			</div>
+
+
 
 		
 			<a name="home"></a><div class="welcome"><p>WELCOME</p></div>
@@ -82,7 +88,7 @@
 				</p></div>
 			</div>
 
-		<div class="nav">
+		<div class="nav show">
 			<a href="#who"><img class="navlink" src="images/who.png" alt="who" /> </a>
 			<br>
 			<a href="#what"><img class="navlink" src="images/what.png" alt="what"/>  </a>
@@ -90,6 +96,15 @@
 			<a href="#where"><img class="navlink" src="images/where.png" alt="where" /> </a>
 			<br><br>
 		</div>
+				<div class="navoff hide">
+					<a href="#who"><img class="navlink" src="images/who_off.png" alt="who" /> </a>
+					<br>
+					<a href="#what"><img class="navlink" src="images/what_off.png" alt="what"/>  </a>
+					<br>
+					<a href="#where"><img class="navlink" src="images/where_off.png" alt="where" /> </a>
+					<br><br>
+				</div>
+
 	</div>
 
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -97,8 +112,17 @@
 
  $('.lightswitch').on('click', function() {
     console.log('clicked');
-
+    $(this).toggleClass('hide');
+    $('.lightswitchoff').toggleClass('hide');
 	   });
+
+  $('.lightswitchoff').on('click', function() {
+     console.log('clicked');
+    $(this).toggleClass('hide');
+    $('.lightswitch').toggleClass('hide');
+	   });
+
+
 	</script>
 
   </body>
