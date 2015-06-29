@@ -46,7 +46,7 @@ body.black {
 }
 
 .navoff {
-	width: 50%;
+	width: 500px;
 	position: fixed;
 	bottom: 1em;
 	right: 0;
@@ -68,6 +68,13 @@ body.black {
 	position: fixed;
 	top: 0;
 	left: 0;
+}
+
+.content {
+	padding-top: 5em;
+	padding-bottom: 15em;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 img {
