@@ -1,0 +1,97 @@
+body {
+	padding: 25px 25px
+}
+
+#welcome {
+	padding: 10%
+}
+
+.full-vh {
+	height: 100vh;
+	padding-top: 100px;
+}
+
+
+.padded {
+	padding-top: 15%;
+}
+
+/*header and navigation stuff*/
+	.header {
+		position: fixed;
+		top: 0;
+	}
+
+	.pully {
+		position: fixed;
+		right: 10px;
+		width: 15%
+	}
+
+	a, a:active, a:visited {
+		text-decoration: none;
+		color: #7f7f7f
+	}
+
+	a:hover {
+		color: #aaaaaa
+	}
+
+
+/*font stuff */
+		.center {
+			text-align: center
+		}
+
+		.big {
+			font-size: 5vw
+		}
+
+		.med {
+			font-size: 3vw
+		}
+
+		.opaque {
+			background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid white
+		}
+
+
+/* grid layout stuff */
+		.top-left {
+			position: absolute;
+			top: 10px;
+			left: 10px
+		}
+
+		.bottom-right {
+			position: fixed;
+			bottom: 10px;
+			right: 10px
+		}
+
+		.padded {
+			margin: 1%
+		}
+
+		.linkWidth {
+			width: 33%;
+			display: inline-block;
+		}
+
+/* SMALL SCREEN */
+	@media (max-width: 800px) {
+			.bottom-right {
+				font-size: 2vw
+			}
+
+			.header {
+				font-size: 2vw;
+				text-align: center;
+				margin-bottom: 5px
+			}
+			
+			.pully {
+				right: -20px;
+			}
+		}

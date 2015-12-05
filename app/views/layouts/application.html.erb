@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JUSTJIFFY.com</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+  <!-- jquery --> 
+    <% javascript_include_tag 'https://code.jquery.com/jquery-1.11.3.min.js' %>
+
+  <!--   bootstrap -->  
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' %>
+
+  <!--   fonts.com link -->
+    <%= stylesheet_link_tag 'http://fast.fonts.net/cssapi/d7ee3daa-b860-4f09-9e77-0def578f0071.css' %>
+  	<%= stylesheet_link_tag 'font/stylesheet.css' %>
+  	<%= stylesheet_link_tag 'font2/stylesheet.css' %>
+  </head>
+
+  <body>
+    <%= render 'header' %>
+    <%= yield %>
+    <%= render 'nav' %>
+  </body>
+</html>
