@@ -2,10 +2,6 @@ body {
 	padding: 25px 25px
 }
 
-#welcome {
-	padding: 10%
-}
-
 .full-vh {
 	height: 100vh;
 	padding-top: 100px;
@@ -25,7 +21,7 @@ body {
 	.pully {
 		position: fixed;
 		right: 10px;
-		width: 15%
+		width: 12.5%
 	}
 
 	a, a:active, a:visited {
@@ -68,10 +64,6 @@ body {
 			position: fixed;
 			bottom: 10px;
 			right: 10px
-		}
-
-		.padded {
-			margin: 1%
 		}
 
 		.linkWidth {

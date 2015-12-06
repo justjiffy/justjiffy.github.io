@@ -24,6 +24,12 @@ h3 {
   text-align: center;
 }
 
+p  {
+    font-family: courier;
+    text-align: center;
+    margin: 50px 12.5% 0 0;
+}
+
 a, a:active, a:visited {
 		text-decoration: none;
 		color: #7f7f7f;
