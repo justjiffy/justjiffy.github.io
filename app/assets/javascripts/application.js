@@ -17,25 +17,35 @@
 
 $(function(){
     $("h3#welcome").typed({
-        strings: ["You've landed at Juli's Online Portfolio", "This site was created by Juli Emmel, <br> with help from Rails, jQuery, Bootstrap and typed.js", "Welcome and Enjoy!"],
+        strings: ["Welcome :)", "You've landed at Juli's Online Portfolio"],
         typeSpeed: 10,
         showCursor: false,
         backDelay: 2000,
         contentType: 'html'
-    });
+});
 
 // SCROLL ANIMATION
+
+  function scrollTo(location) {
+    $('html, body').animate({scrollTop: $(location).offset().top}, 500, function() { console.log("Finished animating");});
+  }
+
+  $('#who-nav').on('click', function(e) {
+    e.preventDefault();
+    scrollTo('#who');
+  });
   
-  $('#who-nav').on('click', function() {
-    $('html, body').animate({scrollTop: $('#who').offset().top}, 1500);
+  $('#what-nav').on('click', function(e) {
+    e.preventDefault();
+    scrollTo('#what');
   });
-  $('#what-nav').on('click', function() {
-    $('html, body').animate({scrollTop: $('#what').offset().top}, 1500);
+
+  $('#where-nav').on('click', function(e) {
+    e.preventDefault();
+    scrollTo('#where');
   });
-  $('#where-nav').on('click', function() {
-    $('html, body').animate({scrollTop: $('#where').offset().top}, 1500);
-  });
-// scroll animation - end
 
 });
+// scroll animation - end
+
 
