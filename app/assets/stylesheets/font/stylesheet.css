@@ -17,6 +17,7 @@ h1 {
 	font-family: 'cut_me_out_3regular';
 	font-size: 5em;
 	margin: 0;
+    background-color: rgba(255, 255, 255, 0.85);
  }
 
 h3 {
@@ -31,11 +32,15 @@ p  {
 }
 
 a, a:active, a:visited {
-		text-decoration: none;
-		color: #7f7f7f;
-	}
+        text-decoration: none;
+        color: #999999;
+    }
 
 a:hover, a:focus {
-	text-decoration: none;
-	color: #aaaaaa;
-	}
+    text-decoration: none;
+    color: #aaaaaa;
+    }
+
+.smaller {
+   font-size: 3.8em;
+}

@@ -1,12 +1,13 @@
 body {
-	padding: 25px 25px
+	padding: 25px 25px;
+	z-index: 0;
 }
 
 .full-vh {
 	height: 100vh;
 	padding-top: 100px;
+	overflow: scroll;
 }
-
 
 .padded {
 	padding-top: 15%;
@@ -16,12 +17,21 @@ body {
 	.header {
 		position: fixed;
 		top: 0;
+		left: 50px;
 	}
 
 	.pully {
 		position: fixed;
 		right: 10px;
 		width: 12.5%
+	}
+
+	#nav {
+		z-index: 100;
+		position: fixed;
+		top: 100px;
+		left: 80%;
+		width: 100%;
 	}
 
 	a, a:active, a:visited {
@@ -33,6 +43,12 @@ body {
 		color: #aaaaaa
 	}
 
+	.rotated {
+	 position: fixed;
+	 transform: rotate(90deg);
+   transform-origin: left bottom;
+   margin-top: -65px;
+	}
 
 /*font stuff */
 		.center {
