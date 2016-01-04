@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>JUSTJIFFY.com</title>
 		<link rel="stylesheet" href="css/style.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.amd.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -23,8 +23,8 @@
 			</div>
 
 			<a name="who"></a><div class="who clearfix"><p>
-				<strong>NAME:</strong> Juli Lorraine Emmel<br>
-				<strong>HOMETOWN:</strong> San Diego, CA<br>
+				<strong>NAME:</strong> Juli Lorraine Emmel<br><br>
+				<strong>HOMETOWN:</strong> San Diego, CA<br><br>
 				<strong>CURRENT LOCATION:</strong> Los Angeles, CA<br><br>
 				<strong>INTERESTS:</strong>music, musicians, events, computers, coding, augmented realities, composers, live sound, projections, projectionists, videographers, photographers, lighting, props, costumes, animals, cartoons, dancing</p>
 
@@ -48,14 +48,25 @@
 						<img class="where_sm" src="images/projects/web_tjtroyvo.jpg" />
 					</a>
 
-				<a href="projects/spurs/index.html"><img class="where_sm" src="images/projects/web_spurs.jpg" /></a>
+					<a href="projects/spurs/index.html">
+						<img class="where_sm" src="images/projects/web_spurs.jpg" />
+					</a>
 
-				<a href="#"><img class="where_sm" src="images/projects/comingsoon.jpg" /></a>
+					<a href="projects/games/index.html">
+						<img class="where_sm" src="images/projects/comingsoon.jpg" />
+					</a>
 
-				<a href="#"><img class="where_sm" src="images/projects/comingsoon.jpg" /></a>
+					<a href="#">
+						<img class="where_sm" src="images/projects/comingsoon.jpg" />
+					</a>
 
-				<a href="projects/quilt/index.html"><img class="where_sm" src="images/projects/quilt.jpg" /></a>
-				<a href="projects/supershorts/index.html"><img class="where_sm" src="images/projects/supershorts.jpg" /></a>
+					<a href="projects/quilt/index.html">
+						<img class="where_sm" src="images/projects/quilt.jpg" />
+					</a>
+
+					<a href="projects/supershorts/index.html">
+						<img class="where_sm" src="images/projects/supershorts.jpg" />
+					</a>
 
 				</div>
 			<a name="where"></a><div class="where clearfix"><p><strong>PAST EVENTS:</strong> <br>
@@ -114,33 +125,6 @@
 
 	</div>
 
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<script>
-  $('.lightswitch').on('click', function() {
-    console.log('clicked');
-    $(this).addClass('hide').removeClass('show');
-    $('.lightswitchoff').addClass('show').removeClass('hide');
-    $('.justjiffy').addClass('hide').removeClass('show');
-    $('.justjiffyoff').addClass('show').removeClass('hide');
-    $('.nav').addClass('hide').removeClass('show');
-    $('.navoff').addClass('show').removeClass('hide');
-    $('body').addClass('black');
-   });
-
-  $('.lightswitchoff').on('click', function() {
-     console.log('clicked');
-    $(this).removeClass('show').addClass('hide');
-    $('.lightswitch').removeClass('hide').addClass('show');
-    $('.justjiffyoff').removeClass('show').addClass('hide');
-    $('.justjiffy').removeClass('hide').addClass('show');
-    $('.navoff').removeClass('show').addClass('hide');
-    $('.nav').removeClass('hide').addClass('show');
-    $('body').removeClass('black');
-   });
-
-
-	</script>
-
-  </body>
+	  <script src="js/script.js"></script>
+	</body>
 </html>
