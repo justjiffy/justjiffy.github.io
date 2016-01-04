@@ -1,11 +1,7 @@
-html {font-size: 100%;
-
-}
-
 body {
-    font-family: Lucida Console, lucida, courier;
+  font-family: Lucida Console, lucida, courier;
 	font-size: 1em;
-	color: #666666;	
+	color: #666666;
 	background-color: white
 }
 
@@ -13,7 +9,6 @@ body.black {
 	background-color: black;
 	color: #999999;
 }
-
 
 .clearfix:after {
     clear: both;
@@ -24,27 +19,16 @@ body.black {
     visibility: hidden;
 }
 
-.show {
-	display: block;
-}
+.show {	display: block; }
 
-.hide {
-	display: none;
-}
+.hide { display: none; }
 
 .header {
 	width: 100%;
 	position: fixed;
 }
 
-
-.nav {
-	width: 500px;
-	position: fixed;
-	bottom: 1em;
-	right: 0;
-}
-
+.nav,
 .navoff {
 	width: 500px;
 	position: fixed;
@@ -52,12 +36,7 @@ body.black {
 	right: 0;
 }
 
-.lightswitch {
-	position: fixed;
-	top: 0;
-	right: 0;
-}
-
+.lightswitch,
 .lightswitchoff {
 	position: fixed;
 	top: 0;
@@ -119,6 +98,7 @@ img.navlink {
 	height: 60%;
 	width: 60%;
 	float: right;
+	display: block;
 }
 
 img.what {
@@ -149,10 +129,10 @@ a:active {
 }
 
 .welcome {
-	padding-top: 15em;
-	padding-bottom: 800px;
-	padding-right: 50%;
-	padding-left: 50%;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	padding: 300px 0;
 }
 
 .who {
@@ -168,8 +148,16 @@ a:active {
 	padding-top: 7em;
 }
 
+iframe {
+	width: 90%;
+	height: 600px;
+	display: block;
+	margin: 0 auto;
+	border: 0;
+}
+
 @media (max-width: 625px) {
-	
+
 	img.what {
 	height: 60%;
 	width: 60%;

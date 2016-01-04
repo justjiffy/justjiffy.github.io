@@ -1,75 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>JUSTJIFFY.com - Run Downhill Music</title>
 		<link rel="stylesheet" href="../../css/style.css">
-		</head>
-		<body>
-		  <div class="container">	
-			<div class="header">
-				<div class="lightswitch show"><img class="piclink" src="../../images/pully_long.png" height="200px" alt="Click me to turn off the lights!" /></div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
 
-					<div class="lightswitchoff hide"><img class="piclink" src="../../images/pully_short.png" height="200px" alt="Click me to turn on the lights!" /></div>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+			<div class="lightswitch show"><img class="piclink" src="../../images/pully_long.png" height="200px" alt="Click me to turn off the lights!" /></div>
+			<div class="lightswitchoff hide"><img class="piclink" src="../../images/pully_short.png" height="200px" alt="Click me to turn on the lights!" /></div>
 
-				<div class="justjiffy show"><h1><a class="logo" href="../../index.html#home"><img class="link" src="../../images/justjiffy.png" alt="justjiffy.com" /></a></h1></div>
+			<div class="justjiffy show"><h1><a class="logo" href="../../index.html"><img class="link" src="../../images/justjiffy.png" alt="justjiffy.com" /></a></h1></div>
+			<div class="justjiffyoff hide"><h1><a class="logo" href="../../index.html"><img class="link" src="../../images/justjiffy_off.png" alt="justjiffy.com" /></a></h1></div>
+		</div> <!-- end header -->
 
-					<div class="justjiffyoff hide"><h1><a class="logo" href="../../index.html#home"><img class="link" src="../../images/justjiffy_off.png" alt="justjiffy.com" /></a></h1></div>
-			</div>
+    <!-- CONTENT -->
+	  <div class="content">
+      <p>Web developer and technology consultant <a href="http://www.rundownhillmusic.com" target="_blank">Run Downhill</a></p>
+			<p>Website (V1.0):</p>
+      <iframe src="http://www.rundownhillmusic.com"></iframe>
+		</div><!-- end content -->
 
-		<div class="content">
-			<p><br>Web designer and aurasma programmer for multi-media music phenomenon <a href="http://www.rundownhillmusic.com" target="_blank">Run Downhill</a><br><br>
-				Screenshot of the website: <br>
-				<a href="http://www.rundownhillmusic.com" target="_blank"><img src="../../images/projects/rundownhill_website.jpg"></a>
-			</p>
-			</div>
+    <!-- NAVIGATION -->
+   	<div class="nav show">
+			<a href="../../index.html#who"><img class="navlink" src="../../images/who.png" alt="who" /></a>
+			<a href="../../index.html#what"><img class="navlink" src="../../images/what.png" alt="what"/></a>
+			<a href="../../index.html#where"><img class="navlink" src="../../images/where.png" alt="where" /></a>
+	  </div>
+		<div class="navoff hide">
+			<a href="../../index.html#who"><img class="navlink" src="../../images/who_off.png" alt="who" /></a>
+			<a href="../../index.html#what"><img class="navlink" src="../../images/what_off.png" alt="what"/></a>
+			<a href="../../index.html#where"><img class="navlink" src="../../images/where_off.png" alt="where" /></a>
+		</div><!-- end navigation -->
 
-     	<div class="nav show">
-			<a href="../../index.html#who"><img class="navlink" src="../../images/who.png" alt="who" /> </a>
-			<br>
-			<a href="../../index.html#what"><img class="navlink" src="../../images/what.png" alt="what"/>  </a>
-			<br>
-			<a href="../../index.html#where"><img class="navlink" src="../../images/where.png" alt="where" /> </a>
-			<br><br>
-		</div>
-				<div class="navoff hide">
-					<a href="../../index.html#who"><img class="navlink" src="../../images/who_off.png" alt="who" /> </a>
-					<br>
-					<a href="../../index.html#what"><img class="navlink" src="../../images/what_off.png" alt="what"/>  </a>
-					<br>
-					<a href="../../index.html#where"><img class="navlink" src="../../images/where_off.png" alt="where" /> </a>
-					<br><br>
-				</div>
-
-	</div>
-
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<script>
-  $('.lightswitch').on('click', function() {
-    console.log('clicked');
-    $(this).addClass('hide').removeClass('show');
-    $('.lightswitchoff').addClass('show').removeClass('hide');
-    $('.justjiffy').addClass('hide').removeClass('show');
-    $('.justjiffyoff').addClass('show').removeClass('hide');
-    $('.nav').addClass('hide').removeClass('show');
-    $('.navoff').addClass('show').removeClass('hide');
-    $('body').addClass('black');
-   });
-
-  $('.lightswitchoff').on('click', function() {
-     console.log('clicked');
-    $(this).removeClass('show').addClass('hide');
-    $('.lightswitch').removeClass('hide').addClass('show');
-    $('.justjiffyoff').removeClass('show').addClass('hide'); 
-    $('.justjiffy').removeClass('hide').addClass('show');
-    $('.navoff').removeClass('show').addClass('hide');
-    $('.nav').removeClass('hide').addClass('show');
-    $('body').removeClass('black');
-   });
-
-
-	</script>
-   </body>
-
-		</html>
+    <script src="../../js/script.js"></script>
+  </body>
+</html>
