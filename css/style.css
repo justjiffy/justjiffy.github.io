@@ -150,6 +150,17 @@ iframe {
 }
 
 @media (max-width: 625px) {
+
+	img.what {
+	height: 60%;
+	width: 60%;
+	float: left
+    }
+
+	.welcome {
+	padding-bottom: 800px;
+	}
+
 	img.where_sm {
 		padding: .075em;
 		float: left;
