@@ -29,11 +29,17 @@ body.black {
 	position: fixed;
 }
 
-.nav,
+.nav {
+	position: fixed;
+	bottom: 1em;
+	right: 0;
+	display: block;
+}
 .navoff {
 	position: fixed;
 	bottom: 1em;
 	right: 0;
+	display: none;
 }
 
 .lightswitch,
