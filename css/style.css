@@ -29,18 +29,16 @@ body.black {
 	position: fixed;
 }
 
-#navigation {
+.nav {
 	position: fixed;
-	bottom: 0;
+	bottom: 1em;
 	right: 0;
-	height: 250px;
-}
-
-.on {
 	display: block;
 }
-
-.off {
+.navoff {
+	position: fixed;
+	bottom: 1em;
+	right: 0;
 	display: none;
 }
 
@@ -105,7 +103,6 @@ img.piclink {
 img.navlink {
 	width: 350px;
 	display: block;
-	padding: 0;
 }
 
 a:link {
