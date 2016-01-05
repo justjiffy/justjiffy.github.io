@@ -4,9 +4,10 @@
 		<meta charset="utf-8">
 		<title>JUSTJIFFY.com - Super Shorts</title>
 		<link rel="stylesheet" href="../../css/style.css">
-		</head>
-		<body>
-		  <div class="container">	
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+
+  <body>
 			<div class="header">
 				<div class="lightswitch show"><img class="piclink" src="../../images/pully_long.png" height="200px" alt="Click me to turn off the lights!" /></div>
 
@@ -18,60 +19,28 @@
 			</div>
 
 			<div class="content">
-<p><br>A small collection of original super short films made entirely on my iPad using the <a href="https://itunes.applcom/us/app/stop-motion-studio/id441651297?mt=8" target="_blank">Stop Motion</a> app. <br>
-	Music performed by Juli Emmel.</p>
-<center>
-			<iframe src="https://player.vimeo.com/video/124224792" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+        <p><br>A small collection of original super short films made entirely on my iPad using the <a href="https://itunes.applcom/us/app/stop-motion-studio/id441651297?mt=8" target="_blank">Stop Motion</a> app.<br>Music performed by Juli Emmel.</p>
+        <center>
+			   <iframe src="https://player.vimeo.com/video/124224792" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-			<iframe src="https://player.vimeo.com/video/124224599" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> </center>
-</div>
-
-	<div class="nav show">
-			<a href="../../index.html#who"><img class="navlink" src="../../images/who.png" alt="who" /> </a>
-			<br>
-			<a href="../../index.html#what"><img class="navlink" src="../../images/what.png" alt="what"/>  </a>
-			<br>
-			<a href="../../index.html#where"><img class="navlink" src="../../images/where.png" alt="where" /> </a>
-			<br><br>
-		</div>
-				<div class="navoff hide">
-					<a href="../../index.html#who"><img class="navlink" src="../../images/who_off.png" alt="who" /> </a>
-					<br>
-					<a href="../../index.html#what"><img class="navlink" src="../../images/what_off.png" alt="what"/>  </a>
-					<br>
-					<a href="../../index.html#where"><img class="navlink" src="../../images/where_off.png" alt="where" /> </a>
-					<br><br>
-				</div>
-
-	</div>
-
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<script>
-  $('.lightswitch').on('click', function() {
-    console.log('clicked');
-    $(this).addClass('hide').removeClass('show');
-    $('.lightswitchoff').addClass('show').removeClass('hide');
-    $('.justjiffy').addClass('hide').removeClass('show');
-    $('.justjiffyoff').addClass('show').removeClass('hide');
-    $('.nav').addClass('hide').removeClass('show');
-    $('.navoff').addClass('show').removeClass('hide');
-    $('body').addClass('black');
-   });
-
-  $('.lightswitchoff').on('click', function() {
-     console.log('clicked');
-    $(this).removeClass('show').addClass('hide');
-    $('.lightswitch').removeClass('hide').addClass('show');
-    $('.justjiffyoff').removeClass('show').addClass('hide'); 
-    $('.justjiffy').removeClass('hide').addClass('show');
-    $('.navoff').removeClass('show').addClass('hide');
-    $('.nav').removeClass('hide').addClass('show');
-    $('body').removeClass('black');
-   });
+  			<iframe src="https://player.vimeo.com/video/124224599" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </center>
+      </div>
 
 
-	</script>
+      <!-- NAVIGATION -->
+      <div class="nav">
+        <a href="../../index.html#who"><img class="navlink" src="../../images/who.png" alt="who" /></a><br>
+        <a href="../../index.html#what"><img class="navlink" src="../../images/what.png" alt="what"/></a><br>
+        <a href="../../index.html#where"><img class="navlink" src="../../images/where.png" alt="where" /></a><br>
+      </div>
+      <div class="navoff hide">
+        <a href="../../index.html#who"><img class="navlink" src="../../images/who_off.png" alt="who" /></a><br>
+        <a href="../../index.html#what"><img class="navlink" src="../../images/what_off.png" alt="what"/></a><br>
+        <a href="../../index.html#where"><img class="navlink" src="../../images/where_off.png" alt="where" /></a><br>
+      </div><!-- end navigation -->
+
+      <script src="../../script/script.js"></script>
    </body>
 
 		</html>
