@@ -157,11 +157,17 @@ iframe {
   }
 
 	.welcome {
+		padding-top: 300px;
 		padding-bottom: 800px;
 	}
 
 	.who_text {
 		padding: 0;
+	}
+
+	img.navlink {
+		width: 125%;
+		margin-top: 0;
 	}
 
 	img.where_sm {
