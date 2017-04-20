@@ -18,3 +18,13 @@ $('.lightswitchoff').on('click', function() {
   $('.navoff').toggle();
   $('body').removeClass('black');
  });
+
+$(document).ready(resize);
+$(window).resize(resize);
+$(window).on("orientationchange", resize);
+
+function resize() {
+  $.each($('.set-height'), function() {
+    $(this).height($(window).height());
+  });
+}
