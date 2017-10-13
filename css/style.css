@@ -32,13 +32,13 @@ body.black {
 .nav {
 	position: fixed;
 	bottom: 1em;
-	right: 0;
+	right: 2.5%;
 	display: block;
 }
 .navoff {
 	position: fixed;
 	bottom: 1em;
-	right: 0;
+	right: 2.5%;
 	display: none;
 }
 
@@ -47,12 +47,14 @@ body.black {
 	position: fixed;
 	top: 0;
 	right: 0;
+	height: 300px;
+	width: 150px;
 }
 
 .logo {
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 2.5%;
 }
 
 .content {
@@ -63,6 +65,7 @@ body.black {
 }
 
 img.where {
+	margin-top: 50px;
 	padding: .075em;
 	float: left;
 	width: 60%;
@@ -92,6 +95,7 @@ img.piclink {
 	width: 50%;
 	padding: 0em;
 	float: right;
+	cursor: pointer;
 }
 
 img.navlink {
@@ -110,30 +114,39 @@ a:hover {
 	color: #999999;
 }
 
-.welcome {
-	width: 100%;
-	display: inline-block;
-	text-align: center;
-	padding: 300px 0;
+.welcome-text {
+	  position: absolute;
+	  height: 1px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    text-align: center;
 }
 
+.welcome-text p {
+	margin-top: -2%;
+}
+
+.set-height {
+	position: relative;
+	width: 100%;
+	height: 5000px;
+}
 .who {
-	padding-top: 5em;
+	padding-top: 12em;
 	padding-bottom: 30em;
 }
 
-.who_text {
-	text-align: center;
-	padding: 0 150px
-}
-
 .what {
-	padding-top: 5em;
+	padding-top: 12em;
 	padding-bottom: 5em;
 }
 
 .where {
-	padding-top: 5em;
+	padding-top: 12em;
 	padding-bottom: 30em;
 }
 
@@ -144,10 +157,25 @@ iframe {
 	margin: 0 auto;
 	border: 0;
 }
-
+.where-text {
+	display: block;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	height: 1px;
+}
+.inner-container {
+   margin-top: -8em;
+}
+.where-link {
+	text-align: center
+}
 @media only screen
   and (min-device-width: 320px)
-  and (max-device-width: 625px)
+  and (max-device-width: 600px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
 	img.what {
@@ -155,11 +183,27 @@ iframe {
 		width: 60%;
 		float: left;
   }
+  .welcome-text p {
+  	font-size: 3em;
+  }
+  .logo {
+  	top: 3%;
+  	left: 7%;
+  	width: 90%;
+  }
 
-	.welcome {
-		padding-top: 300px;
-		padding-bottom: 800px;
-	}
+  .nav, .navoff {
+  	bottom: 3%;
+  	right: 15%;
+  }
+
+  .mobile-rel {
+  	position: relative !important;
+  	height: auto !important;
+  }
+  .mobile-rel-where {
+  	position: relative !important;
+  }
 
 	.who_text {
 		padding: 0;
@@ -175,5 +219,12 @@ iframe {
 		float: left;
 		width: 60%;
 		margin-left: 45px;
+	}
+	.inner-container {
+	   margin-top: -35%;
+	}
+	.fa-5x {
+		font-size: 8em !important;
+		padding: 0 7px;
 	}
  }
