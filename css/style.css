@@ -1,230 +1,90 @@
 body {
-  font-family: Lucida Console, lucida, courier;
-	font-size: 1.2em;
-	color: #666666;
-	background-color: white;
-	padding: 0 25px;
+	background: black;
+	color: white;
+	transition: all 0.25s ease-out;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+	height: 100vh;
+	font-family: 'Bungee Inline', cursive;
 }
-
-body.black {
-	background-color: black;
-	color: #999999;
-}
-
-.clearfix:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    line-height: 0;
-    visibility: hidden;
-}
-
-.show {	display: block; }
-
-.hide { display: none; }
-
-.header {
+section {
 	width: 100%;
-	position: fixed;
+	z-index: 1;
 }
-
-.nav {
-	position: fixed;
-	bottom: 1em;
-	right: 2.5%;
-	display: block;
-}
-.navoff {
-	position: fixed;
-	bottom: 1em;
-	right: 2.5%;
-	display: none;
-}
-
-.lightswitch,
-.lightswitchoff {
-	position: fixed;
-	top: 0;
-	right: 0;
-	height: 300px;
-	width: 150px;
-}
-
-.logo {
-	position: fixed;
-	top: 0;
-	left: 2.5%;
-}
-
-.content {
-	padding-top: 5em;
-	padding-bottom: 15em;
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-img.where {
-	margin-top: 50px;
-	padding: .075em;
-	float: left;
-	width: 60%;
-}
-
-img.where_sm {
-	padding: .5em;
-	float: left;
-	width: 20%;
-}
-
-img.pano {
+section div {
 	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
-
-img.tall {
-	width: 35%;
-}
-
-img.link {
-	width: 80%;
-	height: 80%;
-}
-
-img.piclink {
-	height: 50%;
-	width: 50%;
-	padding: 0em;
-	float: right;
-	cursor: pointer;
-}
-
-img.navlink {
-	padding: 0;
-	margin-top: -15px;
-}
-
-a:link, a:active, a:visited {
-	text-decoration: none;
-	color: #cccccc;
-}
-
-a:hover {
-	text-decoration: none;
+#name{
+	margin: 10px 0;
+	font-size: 80px;
 	font-weight: bold;
-	color: #999999;
+	z-index: 20;
 }
-
-.welcome-text {
-	  position: absolute;
-	  height: 1px;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    display: block;
-    text-align: center;
+h2 {
+	margin: 10px 0;
+	letter-spacing: 16px;
+	color: greenyellow;
 }
-
-.welcome-text p {
-	margin-top: -2%;
+h3 {
+	transition: transform 1s linear;
 }
-
-.set-height {
-	position: relative;
+h3:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}
+#desc {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 20px;
 	width: 100%;
-	height: 5000px;
-}
-.who {
-	padding-top: 12em;
-	padding-bottom: 30em;
+	height: 100px;
+	overflow: visible;
 }
 
-.what {
-	padding-top: 12em;
-	padding-bottom: 5em;
+a, a:active, a:visited {
+	color: mediumpurple;
+	letter-spacing: 1px;
+	font-size: 26px;
+	word-wrap: break-word;
+	transition: color 1s linear;
+}
+a:hover {
+	color: rebeccapurple;
 }
 
-.where {
-	padding-top: 12em;
-	padding-bottom: 30em;
-}
-
-iframe {
-	width: 90%;
-	height: 600px;
-	display: block;
-	margin: 0 auto;
-	border: 0;
-}
-.where-text {
-	display: block;
-	margin: auto;
+#canvas {
+	position: absolute;
 	top: 0;
 	right: 0;
-	left: 0;
-	bottom: 0;
-	position: absolute;
-	height: 1px;
+	cursor: pointer;
+	z-index: 0;
 }
-.inner-container {
-   margin-top: -8em;
-}
-.where-link {
-	text-align: center
-}
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 600px)
-  and (-webkit-min-device-pixel-ratio: 2) {
 
-	img.what {
-		height: 60%;
+.lift {
+	display: inline-block;
+	transition: transform 0.3s;
+	z-index: 20;
+}
+.lift:hover {
+	transform: translateY(-20px);
+}
+
+body.light {
+	background: white;
+	color: black;
+}
+
+body.light h2 {
+	color: limegreen;
+}
+
+@media only screen  and (min-width: 400px) {
+	section {
 		width: 60%;
-		float: left;
-  }
-  .welcome-text p {
-  	font-size: 3em;
-  }
-  .logo {
-  	top: 3%;
-  	left: 7%;
-  	width: 90%;
-  }
-
-  .nav, .navoff {
-  	bottom: 3%;
-  	right: 15%;
-  }
-
-  .mobile-rel {
-  	position: relative !important;
-  	height: auto !important;
-  }
-  .mobile-rel-where {
-  	position: relative !important;
-  }
-
-	.who_text {
-		padding: 0;
 	}
-
-	img.navlink {
-		width: 125%;
-		margin-top: 0;
-	}
-
-	img.where_sm {
-		padding: .5em;
-		float: left;
-		width: 60%;
-		margin-left: 45px;
-	}
-	.inner-container {
-	   margin-top: -35%;
-	}
-	.fa-5x {
-		font-size: 8em !important;
-		padding: 0 7px;
-	}
- }
+}

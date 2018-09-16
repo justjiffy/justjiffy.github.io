@@ -5,101 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-		<style>
-			body {
-				background: black;
-				color: white;
-				transition: all 0.25s ease-out;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;	
-				height: 100vh;
-				font-family: 'Bungee Inline', cursive;
-			}
-			section {
-				width: 100%;
-				z-index: 1;
-			}
-			section div {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-			}
-			#name{
-				margin: 10px 0;
-				font-size: 80px;
-				font-weight: bold;
-			}
-			h2 {
-				margin: 10px 0;
-				letter-spacing: 16px;
-				color: greenyellow;
-			}
-			h3 {
-				transition: all 1s linear;
-			}
-			h3:hover{
-				cursor: pointer;
-				transform: scale(1.2);
-			}
-			#desc {
-				display: block;
-				text-align: center;
-				margin-top: 10px;
-				font-size: 20px;
-				width: 100%;
-				height: 100px;
-				overflow: visible;
-			}
-			a, a:active, a:visited {
-				color: mediumpurple;
-				letter-spacing: 1px;
-				font-size: 26px;
-				word-wrap: break-word;
-				transition: color 1s linear;
-			}
-			a:hover {
-				color: rebeccapurple;
-			}
-
-			#canvas {
-				position: absolute;
-				top: 0;
-				right: 0;
-				cursor: pointer;
-				z-index: 0;
-			}
-			body.light {
-				background: white;
-				color: black;
-			}
-			
-			body.light h2 {
-				color: limegreen;
-			}
-			
-			@media only screen  and (min-width: 400px) {
-				section {
-					width: 60%;
-				}
-			}
-
-		</style>
 	</head>
 	<body id="body">
 		<canvas id="canvas"></canvas>
 		<div id="name">
-			<span>J</span>
-			<span>U</span>
-			<span>L</span>
-			<span>I</span>
-			<span>&nbsp;</span>
-			<span>T</span>
-			<span>R</span>
-			<span>O</span>
-			<span>Y</span>
+			<span class="lift">J</span>
+			<span class="lift">U</span>
+			<span class="lift">L</span>
+			<span class="lift">I</span>
+			<span class="lift">&nbsp;</span>
+			<span class="lift">T</span>
+			<span class="lift">R</span>
+			<span class="lift">O</span>
+			<span class="lift">Y</span>
 		</div>
 		<h2>WEB DEVELOPER</h2>
 		<section>
@@ -111,114 +31,6 @@
 			<div id="desc">&nbsp;</div>
 
 		</section>
-		<script>
-			var array = [
-			{
-				"name": "linkedin",
-				"display": "linkedin.com/in/justjiffy",
-				"href": "https://www.linkedin.com/in/justjiffy/"
-			}, {
-				"name": "github",
-				"display": "github.com/justjiffy",
-				"href": "https://github.com/justjiffy"
-			},
-			{
-				"name": "projects",
-				"display": "/projects",	
-				"href": "/projects"	
-			}]
-			//get stuff
-			var body = document.getElementById('body');
-			var canvas = document.getElementById('canvas');
-
-			window.addEventListener('resize', resizeCanvas, false);
-			window.addEventListener('oreintationchange', resizeCanvas, false);
-
-			function resizeCanvas() {
-				canvas.width = window.innerWidth;
-				canvas.height = window.innerHeight;
-				draw();
-			}
-
-			var ctx = canvas.getContext('2d');
-			var length = 8;
-
-			// "states" to manage
-			var off = true;
-			resizeCanvas();
-
-			canvas.addEventListener('click', draw);		
-
-
-			function draw() {
-				ctx.clearRect(0,0, canvas.width, canvas.height);
-				if (off == true) {
-					drawChain(length);
-					setStyles("dark");
-					off = false
-				} else  {
-					drawChain(length+6);
-					setStyles("light");
-					off = true;
-				}
-			}
-		
-			function drawChain(length) {
-				ctx.beginPath();
-				for (i=0; i<length; i++) {					
-					ctx.arc(window.innerWidth - 40, (i*5)*2, 4, 0, 2 * Math.PI);
-					if (i==length-1) {
-						drawBell(length);
-					}
-				}
-				ctx.fillStyle = "gold";
-				ctx.fill();
-				ctx.closePath();
-			}
-
-			function drawBell(length) {
-				var w = window.innerWidth;
-				ctx.moveTo(w-30, length*10+15);
-				ctx.bezierCurveTo(w-35,length*10-5, w-35, length*10-5, w-40, length*10-5);
-				ctx.moveTo(w-40, length*10-5);
-				ctx.bezierCurveTo(w-45, length*10-5, w-45, length*10-5, w-50, length*10+15);
-				ctx.lineTo(w-30, length*10+15);
-				ctx.fillStyle = "gold";
-				ctx.fill();
-			}
-
-			function setStyles(mode) {
-				if (mode == "light") {
-					body.classList.add('light');
-				} else {
-					body.classList.remove('light');
-				}
- 			}
-
- 			//for on click on portolio links
-	 		function showLink(text) {
-	 			var match = array.find(function(link) {
- 					return link.name == text;
- 				})
-	 			var a = document.createElement('a');
-	 			a.href = match.href;
-	 			a.target = "_blank";
-	 			a.innerHTML = match.display;
-	 			var node = document.getElementById('desc');
- 				node.removeChild(node.firstChild);
- 				node.append(a);
- 				
- 			}
-
-	 		var links = document.getElementsByTagName('h3');
-	 		links = Array.from(links)
-
-	 		links.forEach(function(link) {
- 				link.addEventListener('click', function() { showLink(link.id) });
- 				link.addEventListener('mouseenter', function() { showLink(link.id) });
-	 		})
-
-	 		var nameLetter = document.getElementsByTagName
-		</script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
