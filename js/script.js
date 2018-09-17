@@ -107,4 +107,9 @@ links.forEach(function(link) {
   link.addEventListener('mouseenter', function() { showLink(link.id) });
 })
 
-var nameLetter = document.getElementsByTagName
+var nameLetters = document.getElementsByTagName('span');
+    nameLetters = Array.from(nameLetters);
+
+    nameLetters.forEach(function(letter) {
+      letter.classList.add('lift')
+    })
