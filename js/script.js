@@ -11,7 +11,7 @@ var array = [
 {
   "name": "projects",
   "display": "project archives", 
-  "href": "view project gallery" 
+  "href": "/projects" 
 }]
 //get stuff
 var body = document.getElementById('body');
