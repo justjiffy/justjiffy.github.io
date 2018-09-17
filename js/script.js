@@ -10,7 +10,7 @@ var array = [
 },
 {
   "name": "projects",
-  "display": "/projects", 
+  "display": "project archives", 
   "href": "view project gallery" 
 }]
 //get stuff

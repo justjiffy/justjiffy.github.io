@@ -4,7 +4,6 @@ body {
 	transition: all 0.25s ease-out;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-direction: column;	
 	height: 100vh;
 	font-family: 'Bungee Inline', cursive;
@@ -31,7 +30,6 @@ h2 {
 	margin: 10px 0;
 	letter-spacing: 16px;
 	color: greenyellow;
-	text-align: center;
 }
 h3 {
 	transition: transform, color, 1s linear;
@@ -120,9 +118,25 @@ body.light h3:hover {
 	color: #FF9800;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
+	body {
+		align-items: center;
+	}
+	.mobile {
+		display: none;
+	}
+	#name {
+		font-size: 66px;
+		margin-top: 10%;
+	}
+	h3 {
+		font-size: 12px;
+	}
+	#name span:nth-child(4) {
+		margin-right: 30px;
+	}
 	section {
-		width: 90%;
+		width: 80%;
 	}
 	main a {
 		width: 50%;
@@ -132,16 +146,17 @@ body.light h3:hover {
 }
 
 @media only screen and (min-width: 740px) {
-	.mobile {
-		display: none;
-	}
-
 	section {
-		width: 60%;
+		width: 40%;
 	}
-
-	#name span:nth-child(4) {
-		margin-right: 30px;
+	#name {
+		font-size: 80px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	h3 {
+		font-size: 16px;
 	}
 
 	main a {
