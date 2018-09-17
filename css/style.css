@@ -114,6 +114,7 @@ footer {
 	height: 50px;
 	bottom: 0;
 	text-align: center;
+	z-index: 30;
 }
 body.light {
 	background: white;
