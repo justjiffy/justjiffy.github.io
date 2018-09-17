@@ -11,7 +11,7 @@ var array = [
 {
   "name": "projects",
   "display": "/projects", 
-  "href": "/projects" 
+  "href": "view project gallery" 
 }]
 //get stuff
 var body = document.getElementById('body');
@@ -29,23 +29,26 @@ function resizeCanvas() {
 var ctx = canvas.getContext('2d');
 var length = 8;
 
-// "states" to manage
-var off = true;
-resizeCanvas();
+// current status of the light switch, 0 is off
+var currentStatus = 0;
 
-canvas.addEventListener('click', draw);   
+// tracking mousedown or up... 
+var mousedown = 0;
+document.addEventListener('mousedown', function() { console.log(mousedown); mousedown++ });
+document.addEventListener('mouseup', function() { console.log(mousedown); mousedown-- });
+
+
+if (mousedown == 0) { resizeCanvas(); }
+
+canvas.addEventListener('click', setStyles);   
 
 
 function draw() {
   ctx.clearRect(0,0, canvas.width, canvas.height);
-  if (off == true) {
+  if (currentStatus == 0) {
     drawChain(length);
-    setStyles("dark");
-    off = false
   } else  {
     drawChain(length+6);
-    setStyles("light");
-    off = true;
   }
 }
 
@@ -73,12 +76,15 @@ function drawBell(length) {
   ctx.fill();
 }
 
-function setStyles(mode) {
-  if (mode == "light") {
+function setStyles() {
+ if (currentStatus == 0) {
     body.classList.add('light');
+    currentStatus++
   } else {
     body.classList.remove('light');
+    currentStatus--
   }
+ draw();
 }
 
 //for on click on portolio links
