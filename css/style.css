@@ -108,6 +108,7 @@ main a:hover img {
 }
 
 footer {
+	background: black;
 	width: 100%;
 	position: fixed;
 	height: 50px;
@@ -118,7 +119,9 @@ body.light {
 	background: white;
 	color: black;
 }
-
+body.light footer {
+	background: white;
+}
 body.light h2 {
 	color: limegreen;
 }
