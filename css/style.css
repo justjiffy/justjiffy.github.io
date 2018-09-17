@@ -23,8 +23,9 @@ section div {
 	font-weight: bold;
 	z-index: 20;
 	cursor: pointer;
-	/*cursor: url('https://s.softdeluxe.com/icons/png/32/140/140122.png'), auto;*/
-
+}
+h1 {
+	font-size: 50px;
 }
 h2 {
 	margin: 10px 0;
@@ -79,7 +80,7 @@ a:hover {
 
 /* gallery */
 main {
-	margin-top: 80px;
+	margin-top: 40px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -105,6 +106,13 @@ main a img {
 main a:hover img {
 	object-position: bottom;
 }
+
+footer {
+	position: fixed;
+	height: 50px;
+	bottom: 0;
+	text-align: center;
+}
 body.light {
 	background: white;
 	color: black;
@@ -118,7 +126,11 @@ body.light h3:hover {
 	color: #FF9800;
 }
 
+.desktop { display: none }
+
 @media only screen and (min-width: 600px) {
+.desktop { display: none }
+
 	body {
 		align-items: center;
 	}
@@ -146,8 +158,10 @@ body.light h3:hover {
 }
 
 @media only screen and (min-width: 740px) {
+	.desktop { display: inline; }
+
 	section {
-		width: 40%;
+		width: 50%;
 	}
 	#name {
 		font-size: 80px;
