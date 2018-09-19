@@ -23,16 +23,46 @@ var projects = [
 		"img": "project_tj.png"
 	},
 	{
-		"name": "Javascript Projects",
-		"link": "http://projects.ucode.com/bxFryo9kPrNEOlgAvD3ohM1aJOD2/-LKy1JbEKEs1GwKSGmSV/index.html",
+		"name": "T.J. Troy - VO",
+		"link": "http://tjtroy.com/vo/",
+		"tags": ["entertainment"],
+		"img": "project_tjvo.png"
+	},
+	{
+		"name": "Fortune Teller",
+		"link": "http://projects.ucode.com/bxFryo9kPrNEOlgAvD3ohM1aJOD2/-LJQxcBbpDn94E9JyYL6",
 		"tags": ["for fun"],
-		"img": "project_js.png"
+		"img": "project_fortune.png"
 	},
 	{
 		"name": "Web Animation Projects",
 		"link": "http://projects.ucode.com/bxFryo9kPrNEOlgAvD3ohM1aJOD2/-LG2FlTx92euh3VEPdHr",
 		"tags": ["for fun"],
 		"img": "project_css.png"
+	},
+	{
+		"name": "Formulas",
+		"link": "http://projects.ucode.com/bxFryo9kPrNEOlgAvD3ohM1aJOD2/-LLQpJKjI9htbpCK1Yi8",
+		"tags": ["for fun"],
+		"img": "project_formulas.png"
+	},
+	{
+		"name": "Madlibs",
+		"link": "http://projects.ucode.com/bxFryo9kPrNEOlgAvD3ohM1aJOD2/-LJ5_ppVSjBKG-bl26Gt",
+		"tags": ["for fun"],
+		"img": "project_madlibs.png"
+	},
+	{
+		"name": "Choose Your Adventure",
+		"link": "http://projects.ucode.com/bxFryo9kPrNEOlgAvD3ohM1aJOD2/-LLQGrDCVGKNMuiWG0Ak",
+		"tags": ["for fun"],
+		"img": "project_cya.png"
+	},
+	{
+		"name": "TIC-CAT-TOE",
+		"link": "http://www.justjiffy.com/projects/tic-cat-toe/index.html",
+		"tags": ["for fun"],
+		"img": "project_ticcattoe.png"
 	}
 ]
 

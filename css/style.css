@@ -100,7 +100,7 @@ main a img {
 	height: 100%;
 	object-fit: cover;
 	object-position: top;
-	transition: object-position 5s;
+	transition: object-position 5s linear;
 }
 
 main a:hover img {
