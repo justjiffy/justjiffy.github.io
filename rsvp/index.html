@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Troy's Invite You...</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Griffy|PT+Sans');
+		body {
+		  margin: 0;
+		}
+		header {
+			padding-top: 20px;
+		}
+		section {
+		  padding: 10px;
+		  background: linear-gradient(darkblue,  purple);
+		  height: 100vh;
+		  position: relative;
+		  color: palegreen;
+		  text-shadow: 2px 2px 20px white;
+		  text-align: center;
+		  font-family: 'Griffy';
+		  letter-spacing: 0.25em;
+		  font-size: 110%;  
+		}
+		section+section {
+			background: linear-gradient(black,red, orange)
+		}
+		span {
+		  font-size: 80%;
+		}
+		h1, h2, h3, p {
+		  margin: 0;
+		  z-index: 100;
+		  position: relative;
+		}
+		h1 {
+		  font-size: 50px;
+		  animation: wordglow 10s infinite, wiggle 8s infinite linear;
+		}
+		h1 span {
+			display: block;
+			font-size: 120%;
+			line-height: 1;
+		}
+		p {
+		  font-family: 'PT Sans';
+		  letter-spacing: 0.1em;
+		  color: white;
+		}
+		header h2 {
+		  color: white;
+		  font-size: 18px;
+		}
+		.content {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			height: 100%;
+		}
+
+		.date p {
+		  font-size: 26px;
+		}
+		.date h3 {
+		  font-size: 30px;
+		  font-weight: 300;
+		  text-shadow: 2px 2px 12px black;
+		}
+		.details h3 {
+		  text-shadow: 2px 2px 12px black;
+		}
+		main {
+		  width: 50%;
+		  max-width: 400px;
+		  margin: auto;
+		  transform: translateX(50%);
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: space-around;
+		  height: 75%;
+		  z-index: 100;
+		  position: relative;
+		}
+		form {
+		  text-align: left;
+		  width: 100%;
+		  max-width: 500px;
+		  margin: auto;  
+		  padding-top: 50px;
+		}
+		form h1 {
+		  text-align: center;
+		}
+		fieldset {
+		  margin-bottom: 10px;
+		}
+		form div {
+			border: 1px solid white;
+			padding: 50px;
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		legend {font-size: 20px; text-align: center;}
+		label {
+		  width: 50%;
+		  display: inline-block;
+		  text-align: right;
+		  margin: 5px;
+		  font-family: 'PT Sans';
+		}
+		input {
+		  width: 100%;
+		}
+		textarea {
+		  width: 100%;
+		}
+		button {
+		  font-family: 'Griffy';
+		  font-size: 24px;
+		  background: white;
+		  letter-spacing: 0.25em;
+		  margin: 10px auto;
+		  display: block;
+		}
+		input[type='number'] {
+		  width: 10%
+		}
+		section {
+		  height: 100vh;
+		}
+		.house {
+		  z-index: 0;
+		  width: 250px;
+		  margin: auto;
+		  position: absolute;
+		  border-right: 20px solid transparent;
+		  border-left: 50px solid transparent;
+		  border-top: 300px solid black;
+		  bottom: 0;
+		  right: 0;
+		  left: 0;
+		  transform: translateX(-50%)
+		}
+
+		.roof {
+		  width: 0;
+		  height: 0;
+		  border-color: black;
+		  border-bottom: 250px solid transparent;
+		  border-right: 350px solid transparent;
+		  border-left: 350px solid black;
+		  position: absolute;
+		  top: -300px;
+		  left: -100px;
+		  transform: rotate(40deg) 
+		}
+
+		.window-1 {
+		  position: absolute;
+		  top: -140px;
+		  left: 30px;
+		  height: 70px;
+		  width: 50px;
+		  animation: glow 4s linear;
+		  background: linear-gradient(yellow,orange 60%);
+		}
+
+		.bar {
+		  width: 100%;
+		  height: 5px;
+		  background-color: black;
+		  position: absolute;
+		  top: 0;
+		  bottom: 0;
+		  margin: auto;
+		}
+		.bar+.bar {
+		  transform: translateX(-20%) rotate(90deg);
+		  width: 150%;
+		}
+		.window-2 {
+		  position: absolute;
+		  top: -280px;
+		  left: 5px;
+		  height: 90px;
+		  width: 80px;
+		  background: linear-gradient(yellow,orange 70%);
+		  transform: skewX(5deg);
+		  animation: glow 7s infinite reverse;
+		}
+
+		.window-3 {
+		  position: absolute;
+		  top: -290px;
+		  right: 20px;
+		  height: 110px;
+		  width: 80px;
+		  background: linear-gradient(yellow,orange 65%);
+		  background-size: 100% 200%;
+		  transform: skewX(-5deg);
+		  animation: glow 5s infinite;
+		}
+		.window-3 .bar+.bar {
+		  transform: translateX(-20px) rotate(-95deg);
+		}
+
+		.chimney {
+		  width: 80px;
+		  height: 0;
+		  border-top: 190px solid black;
+		  border-right: 10px solid transparent;
+		  border-left: 10px solid transparent;
+		  position: absolute;
+		  top: -500px;
+		  right: 0;
+		}
+
+		.door {
+		  position: absolute;
+		  background: radial-gradient(red, maroon);
+		  bottom: 0;
+		  right: 50px;
+		  width: 80px;
+		  height: 110px;
+		}
+
+		.knob {
+		  position: absolute;
+		  background: radial-gradient(#3F250B, black);
+		  width: 12px;
+		  height: 12px;
+		  border-radius: 50%;
+		  right: 5px;
+		  top: 50%;
+		}
+
+		@keyframes glow {
+		  50% {
+		    background-size: 100% 100%;
+		  }
+		  70% {
+		    background-size: 100% 300%;
+		  }
+		  100% {
+		    background-size: 100% 200%;
+		  }
+		}
+
+		@keyframes wordglow {
+		  0% {
+		    text-shadow: 2px 2px 10px black;
+		  }  
+		  50% {
+		    text-shadow: 2px 2px 20px black;
+		    letter-spacing: 0.18em;
+		  }
+		  100% {
+		    text-shadow: 2px 2px 10px black;
+		  }
+		}
+
+		@keyframes wiggle {
+		  0% {
+		    transform: rotate(0deg);
+		  }
+		  25% {
+		    transform: rotate(-2deg);
+		  }
+		  50% {
+		    transform: rotate(0deg);
+		  }
+		  75% {
+		    transform: rotate(2deg)
+		  }
+		  100% {
+		    transform: rotate(0deg);
+		  }
+		}
+		@media only screen and (max-width: 600px) {
+		  main {
+		    width: 100%;
+		    transform: translateX(0);
+		    justify-content: space-around;
+		    margin-top: 10px;
+		  }
+		  h1 {
+		  	font-size: 36px;
+		  }
+		  header p {
+		  	padding: 0 50px;
+		  }
+		  .date h3 {
+		  	font-size: 24px;
+		  }
+		  .house {
+		    transform-origin: 100% 100%;
+		    transform: scaleY(1.2) translateX(-50%);
+		  }
+		  .date, .details {
+		    margin-left: 50%;
+		  }
+		  section {
+		  	overflow: hidden;
+		  }
+		  form {
+		  	margin-top: 15%	;
+		  }
+		}
+
+		@media only screen and (min-width: 1200px) {
+			.house {
+			    transform-origin: bottom;
+			    transform: scale(1.8) translateX(-50%);
+			}
+			header *, main * {
+				transform: scale(1.2);
+			}
+		}
+	</style>
+</head>
+<body>
+	  <section>
+	    <div class="house">
+	      <div class="roof"></div>
+	      <div class="chimney"></div>
+	      <div class="window-1">
+	        <div class="bar"></div>
+	        <div class="bar"></div>
+	      </div>
+	      <div class="window-2">
+	        <div class="bar"></div>
+	        <div class="bar"></div>
+	      </div>
+	      <div class="window-3">
+	        <div class="bar"></div>
+	        <div class="bar"></div>
+	      </div>
+	      <div class="door"><div class="knob"></div></div>
+	    </div>
+	    <div class="content">
+		    <header>
+		      <h2>You're Invited To...</h2>
+		      <h1>The Troy's<span>New Haunt!<span></h1>
+		      <p>Married and Moved In!? It's time for a party.</p>
+		    </header>
+		    <main>
+		      <div class="date">
+		        <p>Join Us...</p>
+		        <h3>October 28th, 2018</h3>
+		        <p>4pm - 9pm</p>
+		      </div>
+		      <div class="details">
+		        <p>At Our Home in Pasadena, CA <br><span>Near Lake / Washington</span></p>
+		        <h3>Kids & Pets welcome!</h3>
+		        <p>Food and Drink will be provided,<br>please RSVP below.</p>
+		      </div>
+		    </main>
+		  </div>
+	  </section>
+	  <section>
+	    
+	  <form name="rsvp" id="form">
+	      <h1>&#x1F383 R.S.V.P.&#x1F383</h1>
+	      <fieldset><legend>Name</legend>
+	        <input type="text" name="guest_name" required></fieldset>
+	      <fieldset><legend>Email</legend>
+	        <input type="text" name="email"
+	required></fieldset>
+	      <fieldset><legend>No. of Guest</legend>
+	        <label>Adults: </label><input type="number" name="adults" min="0" max="10" required autocomplete="off"><br>
+	        <label>Children: </label><input type="number" name="children" min="0" max="10" autocomplete="off"><br>
+	        <label>Pets: </label><input type="number" name="pets" min="0" max="10" autocomplete="off">
+	      </fieldset>
+	    <fieldset>
+	      <legend>Note for The Troy's</legend>
+	      <textarea name="notes"></textarea>
+	    </fieldset>
+	      <button type="submit" id="submit-form">RSVP</button>
+	    </form>
+	    </section>
+	    <script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwbHhbz8OzJf22TT_0u-A5tIYmHCxj1Ea5ExV4NIhHrA0LgloA/exec'
+			const form = document.forms['rsvp']
+
+			form.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			 	.then(response => success(response))
+			 	.catch(error => console.error('Error!', error.message))
+			})
+
+			function success(response) {
+				console.log('Success!', response);
+				const div = document.createElement('div');
+				const heading = document.createElement('h1');
+
+				heading.innerHTML = "&#x1F383Thanks&#x1F383"	
+				div.innerHTML = "<h2>See you October 28th</h2>" + 
+									  "<p>at</p>" + 
+									  "<h2>991 E. Rio Grande" + "<br>" + "Pasadena, CA 91104 </h2>";	
+
+
+				document.getElementById('form').innerHTML = "";
+
+				document.getElementById('form').appendChild(heading);
+				document.getElementById('form').appendChild(div);
+			}
+	    </script>
+
+</body>
+</html>
