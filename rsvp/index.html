@@ -5,8 +5,10 @@
 	<title>The Troy's Invite You...</title>
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Griffy|PT+Sans');
-		body {
+		body, html {
 		  margin: 0;
+		  max-width: 100%;
+		  overflow-x: hidden;
 		}
 		header {
 			padding-top: 20px;
@@ -15,6 +17,7 @@
 		  padding: 10px;
 		  background: linear-gradient(darkblue,  purple);
 		  height: 100vh;
+		  min-height: fit-content;
 		  position: relative;
 		  color: palegreen;
 		  text-shadow: 2px 2px 20px white;
@@ -79,6 +82,7 @@
 		  flex-direction: column;
 		  justify-content: space-around;
 		  height: 75%;
+		  min-height: fit-content;
 		  z-index: 100;
 		  position: relative;
 		}
@@ -283,7 +287,7 @@
 		    transform: rotate(0deg);
 		  }
 		}
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 700px) {
 		  main {
 		    width: 100%;
 		    transform: translateX(0);
