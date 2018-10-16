@@ -105,6 +105,18 @@
 			padding: 10% 5%;
 			text-align: center;
 			margin-top: 30px;
+			transition: all 1s;
+			transform: scaleY(0);
+		}
+		.scale-in {
+			transform: scaleY(1);
+		}
+		.fade-in {
+			opacity: 1;
+		}
+		form div * {
+			opacity: 0;
+			transition: opacity 0.5s 1s;
 		}
 		form div h2 {
 			font-size: 22px;
@@ -406,6 +418,7 @@
 			function success(response) {
 				console.log('Success!', response);
 				const div = document.createElement('div');
+				      div.id = "container";
 				const heading = document.createElement('h1');
 
 				heading.innerHTML = "&#x1F383Thanks&#x1F383"	
@@ -418,6 +431,21 @@
 
 				document.getElementById('form').appendChild(heading);
 				document.getElementById('form').appendChild(div);
+				
+				setTimeout(function() {
+					document.getElementById('container').classList.add('scale-in');					
+				}, 100);
+
+				const containerItems = document.getElementById('container').children;
+				const cIarray = [...containerItems];
+				cIarray.forEach(fadeIn);
+
+				let i = 1;
+
+				function fadeIn(element, i) {
+						console.log(element)
+						setTimeout(function() { element.classList.add('fade-in') }, i++ * 250);						
+				} 
 			}
 	    </script>
 
