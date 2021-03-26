@@ -1,5 +1,5 @@
 body {
-	background: black;
+	background: black ;
 	color: white;
 	transition: all 0.25s ease-out;
 	display: flex;
@@ -53,10 +53,11 @@ h3:hover{
 a, a:active, a:visited {
 	color: mediumpurple;
 	letter-spacing: 1px;
-	font-size: 26px;
+	font-size: 10px;
 	word-wrap: break-word;
 	text-decoration: none;
 	transition: color 1s linear;
+  margin: auto 5px;
 }
 a:hover {
 	color: rebeccapurple;
@@ -108,10 +109,9 @@ main a:hover img {
 }
 
 footer {
-	background: black;
 	width: 100%;
 	position: fixed;
-	height: 50px;
+	height: 70px;
 	bottom: 0;
 	text-align: center;
 	z-index: 30;
@@ -121,7 +121,7 @@ body.light {
 	color: black;
 }
 body.light footer {
-	background: white;
+	/* background: white; */
 }
 body.light h2 {
 	color: limegreen;
