@@ -88,34 +88,35 @@ function setStyles() {
 }
 
 //for on click on portolio links
-function showLink(text) {
-  var match = array.find(function(link) {
-    return link.name == text;
-  })
-  var a = document.createElement('a');
-  a.href = match.href;
-  a.id = "test";
-  a.classList.add('fly-start');
-  a.target = "_blank";
-  a.innerHTML = match.display;
-  var node = document.getElementById('desc');
-  node.removeChild(node.firstChild);
-  node.append(a);
-  document.getElementById('test').classList.add('fly-in');
+// FEATURE REMOVED FOR STREAMLINED UI/2021 UPGRADE
+// function showLink(text) {
+//   var match = array.find(function(link) {
+//     return link.name == text;
+//   })
+//   var a = document.createElement('a');
+//   a.href = match.href;
+//   a.id = "test";
+//   a.classList.add('fly-start');
+//   a.target = "_blank";
+//   a.innerHTML = match.display;
+//   var node = document.getElementById('desc');
+//   node.removeChild(node.firstChild);
+//   node.append(a);
+//   document.getElementById('test').classList.add('fly-in');
   
-}
+// }
 
-var links = document.getElementsByTagName('h3');
-links = Array.from(links)
+// var links = document.getElementsByTagName('h3');
+// links = Array.from(links)
 
-links.forEach(function(link) {
-  link.addEventListener('click', function() { showLink(link.id) });
-  link.addEventListener('mouseenter', function() { showLink(link.id) });
-})
+// links.forEach(function(link) {
+//   link.addEventListener('click', function() { showLink(link.id) });
+//   link.addEventListener('mouseenter', function() { showLink(link.id) });
+// })
 
-var nameLetters = document.getElementsByTagName('span');
-    nameLetters = Array.from(nameLetters);
+// var nameLetters = document.getElementsByTagName('span');
+//     nameLetters = Array.from(nameLetters);
 
-    nameLetters.forEach(function(letter) {
-      letter.classList.add('lift')
-    })
+//     nameLetters.forEach(function(letter) {
+//       letter.classList.add('lift')
+//     })

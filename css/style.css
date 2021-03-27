@@ -23,6 +23,7 @@ section div {
 	font-weight: bold;
 	z-index: 20;
 	cursor: pointer;
+  text-align: center;
 }
 h1 {
 	font-size: 50px;
@@ -31,6 +32,7 @@ h2 {
 	margin: 10px 0;
 	letter-spacing: 16px;
 	color: greenyellow;
+  text-align: center;
 }
 h3 {
 	transition: transform, color, 1s linear;
